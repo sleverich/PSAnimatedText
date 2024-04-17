@@ -1,0 +1,44 @@
+// Execution Order
+// 1. commands/createRegion
+// 2. commands/selectRegion
+// 3. commands/clearRegion
+// 4. Other Commands (order not guaranteed)
+// 5. text
+
+{
+    "text": "This is the text of this block\nIt uses the same escape notation that simple text uses",
+    "commands": [
+        {
+            "command": "clearRegion",
+            "clearSymbol": " "
+        },
+        {
+            "command": "selectRegion",
+            "region": 0
+        },
+        {
+            "command": "createRegion",
+            "region": 1,
+            "startX": 2,
+            "startY": 2,
+            "maxWidth": 255,
+            "maxHeight": 255
+        },
+        {
+            "command": "horizontalLine",
+            "startX": 0,
+            "endX": 20,
+            "startY": 0,
+            "endpointSymbol": "+",
+            "lineSymbol": "-"
+        },
+        {
+            "command": "verticalLine",
+            "startX": 0,
+            "startY": 0,
+            "endY": 20,
+            "endpointSymbol": "+",
+            "lineSymbol": "|"
+        }
+    ]
+}
